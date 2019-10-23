@@ -1,0 +1,226 @@
+<html>
+  <head>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="icon" href="img/Logo.png">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+<body>
+<script language="javascript">
+  function Clickme1(){
+var quant1 = parseInt(document.getElementById("quantity1").value);
+var total1 = "";
+var totalbill = "";
+ 
+total1 = 20 * quant1;
+document.getElementById("total1").value = total1;
+totalbill = totalbill + total1;
+calc_total_bill();
+}
+ 
+  function Clickme2(){
+var quant2 = parseInt(document.getElementById("quantity2").value);
+var total2 = "";
+var totalbill = "";
+ 
+total2 = 15 * quant2;
+document.getElementById("total2").value = total2;
+totalbill = totalbill + total2;
+calc_total_bill();
+}
+ 
+  function Clickme3(){
+var quant3 = parseInt(document.getElementById("quantity3").value);
+var total3 = "";
+var totalbill = "";
+ 
+total3 = 19 * quant3;
+document.getElementById("total3").value = total3;
+totalbill = totalbill + total3;
+calc_total_bill();
+}
+ 
+  function Clickme4(){
+var quant4 = parseInt(document.getElementById("quantity4").value);
+var total4 = "";
+var totalbill = "";
+   
+total4 = 22 * quant4;
+document.getElementById("total4").value = total4;
+totalbill = totalbill + total4;
+calc_total_bill();
+}
+ 
+  function Clickme5(){
+var quant5 = parseInt(document.getElementById("quantity5").value);
+var total5 = "";
+var totalbill = "";
+ 
+total5 = 25 * quant5;
+document.getElementById("total5").value = total5;
+totalbill = totalbill + total5;
+calc_total_bill();
+}
+
+function Clickme6(){
+var money1 = parseInt(document.getElementById("money").value);
+var totBill=0;
+    for (var i = 1; i <= 5; i++) {
+        if(document.getElementById("total"+i).value != "")
+            totBill=totBill+parseInt(document.getElementById("total"+i).value);
+    }
+document.getElementById("return_money").value = money1-totBill;
+
+
+}
+ 
+function calc_total_bill() {
+    var totBill=0;
+    for (var i = 1; i <= 5; i++) {
+        if(document.getElementById("total"+i).value != "")
+            totBill=totBill+parseInt(document.getElementById("total"+i).value);
+    }
+    document.getElementById("totalbill").value = totBill;
+   
+}
+ </script>
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo"><img src="img/FoodBowl.png" style=" width: 255px; height: 63.65px;"alt="LOGO"> </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="about.html"> About </a></li>
+        <li><a href="recipes.html">Menu List </a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+ <div class="container">
+   
+    
+<center><table width="900" border="1" cellspacing="0" class="striped centered"></center>
+ <tr height="30">
+     <th bgcolor="#FFFFE0"colspan="3"><center><font size="80">     MENU     </font></center></th>
+  </tr>
+<tr height="10">
+    <th width="220"><center>IMAGE</center></th>
+    <th><center>ITEM</center></th>
+    <th><center>PRICE</center></th>
+ </tr>
+  <tr height="15">
+     <td width="220"><center><img src="img/Tiffins/dosa.jpg" width="200" heigth="75"></center></td>
+     <td><center>DOSA</center><br><br>
+    <td><center>Rs.20</center><br><br>
+  </tr>
+ 
+  <tr height="15">
+     <td width="220"><center><img src="img/Tiffins/idli.jpg" width="200" heigth="200"></center></td>
+     <td><center> IDLY</center> <br><br>
+     <td><center>Rs.15</center><br><br>
+  </tr>
+ 
+  <tr height="15">
+     <td width="220"><center><img src="img/Tiffins/bajji.jpg" width="200" heigth="200"></center></td>
+     <td><center>BAJJI</center> <br><br>
+     <td><center>Rs.19</center> <br><br>
+    </td>
+  </tr>
+ 
+  <tr height="15">
+     <td width="220"><center><img src="img/Tiffins/wada.jpg" width="200" heigth="200"></center></td>
+     <td><center>WADA</center> <br><br>
+     <td><center>Rs.22</center> <br><br>
+    </td>
+  </tr>
+ 
+  <tr height="15">
+     <td width="220"><center><img src="img/Tiffins/puri.webp" width="200" heigth="200"></center></td>
+     <td><center>PURI</center> <br><br>
+    <td><center>Rs.25</center><br><br>
+     </td>
+  </tr>
+ 
+</table>
+ 
+<center><table width="600" border="1" cellspacing="0" class="striped centered"></center>
+ 
+  <tr height="50">
+     <td bgcolor="#FF8080"colspan="3"><center><font size="75">YOUR BILL</font></center></td>
+  </tr>
+  <tr height="15">
+    <td>ITEM:DOSA<br>
+        Quantity:<div class="input-field inline"><input type="number" min="0"  name="quantity1" id="quantity1" value="0"></div>
+          Price:<div class="input-field inline"><input type="text" name="quantity" id="total1" value=""></div></td>
+  </tr>
+ 
+  <tr height="15">
+      <td>ITEM:IDLY<br>
+        Quantity:<div class="input-field inline"><input type="number" min="0" name="quantity2" id="quantity2" value="0"></div>
+        Price:<div class="input-field inline"><input type="text" name="quantity2" id="total2" value=""></div></td>
+  </tr>
+ 
+  <tr height="15">
+    <td>ITEM:BAJJI<br>
+        Quantity:<div class="input-field inline"><input type="number" min="0" name="quantity3" id="quantity3" value="0"></div>
+        Price:<div class="input-field inline"><input type="text" name="quantity3" id="total3" value=""></div></td>
+  </tr>
+ 
+  <tr height="15">
+    <td>ITEM:WADA<br>
+        Quantity:<div class="input-field inline"><input type="number" min="0" name="quantity4" id="quantity4" value="0"></div>
+         Price:<div class="input-field inline"><input type="text" name="quantity4" id="total4" value=""></div></td>
+  </tr>
+ 
+  <tr height="15">
+    <td>ITEM:PURI<br>
+        Quantity:<div class="input-field inline"><input type="number" min="0" name="quantity5" id="quantity5" value="0"></div>
+        Price:<div class="input-field inline"><input type="text" name="quantity5" id="total5" value=""></div></td>
+  </tr>
+ 
+  <tr>
+    <td colspan="3" height="25" bgcolor="#CCFFB2">TOTALBILL:<div class="input-field inline"><input type="text" name="total" id="totalbill" value="" size="15" ></div>
+      <div class="input-field inline"><input style=" padding-top:10%; " class="btn waves-effect waves-red" type="button" id="button1" value="BUY" onClick="javascript: Clickme1();Clickme2();Clickme3();Clickme4();Clickme5();"></div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Money from Customer:<div class="input-field inline"><input type="text" name="money" id="money" value="" size="15"></div>
+      <div class="input-field inline"><input style=" padding-top:9%; "class="btn waves-effect waves-red" type="button" id="button2" value="Calculate" onClick="javascript: Clickme6();"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Money to be returned :<div class="input-field inline"><input type="text" name=" return_money" id="return_money" value="" size="15"></div></td>
+  </tr>
+ 
+</table>
+
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text"><img src="img/TextLogo.png"></h5>
+          <p class="grey-text text-lighten-4"> The CHEF Billing System of FOODBOWL © REstaurant.  </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Admin Login</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"> Menu List</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+       FOODBOWL © 2019 Copyright Text
+    
+      </div>
+    </div>
+  </footer></body>
+      
+</html>
+
