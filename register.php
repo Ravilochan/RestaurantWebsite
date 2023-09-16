@@ -112,7 +112,7 @@ if(isset($_POST['reg_user']))
         <h6> For your Hotel User Account</h6>
       </div>
   <form method="post" action="register.php">
-  	<?php include('errors.php'); ?>
+  	<?php include("errors.php"); ?>
   	<div class="input-field col s12">
   	  <label>Username</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">

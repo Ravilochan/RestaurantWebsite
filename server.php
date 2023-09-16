@@ -1,10 +1,7 @@
 <?php
 session_start();
 $username=$_SESSION['username'];
-
-//error_reporting(E_ERROR | E_WARNING | E_PARSE);
-
- $conn=mysqli_connect("localhost","root","","chef");
+$conn=mysqli_connect("localhost","root","","chef");
 
 $des=mysqli_query($conn,"SELECT `designation` FROM `users` WHERE username='$username'");
 $data= mysqli_fetch_array($des);
